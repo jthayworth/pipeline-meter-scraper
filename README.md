@@ -8,6 +8,8 @@ The following setup is required to run this program locally:
 
 1. [Dotnet 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 2. [VS Code](https://code.visualstudio.com/)
+3. [C# VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+4. [.NET Install Tool VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime)
 
 ## Job Settings
 
