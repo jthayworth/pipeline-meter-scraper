@@ -4,7 +4,7 @@ This is a c# project that will scrape information from various different pipelin
 
 ## Setup
 
-The following setup is required to use this program:
+The following setup is required to run this program locally:
 
 1. [Dotnet 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 2. [VS Code](https://code.visualstudio.com/)
