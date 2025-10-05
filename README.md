@@ -15,11 +15,11 @@ Each job requires the following environment variables to be set. These variables
 
 #### Generic Variables
 
-| Variable Name | Description                                                                                                       |
-| ------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `DB_USERNAME` | The username for authenticating into the database                                                                 |
-| `DB_PASSWORD` | The password for authenticating into the database                                                                 |
-| `CHROME_PATH` | The path to the chrome app/exe. You can navigate [here](chrome://version) in Chrome to find the `Executable Path` |
+| Variable Name | Description                                                                                    |
+| ------------- | ---------------------------------------------------------------------------------------------- |
+| `DB_USERNAME` | The username for authenticating into the database                                              |
+| `DB_PASSWORD` | The password for authenticating into the database                                              |
+| `CHROME_PATH` | The path to the chrome app/exe. IN chrome go to chrome://version to find the `Executable Path` |
 
 #### Job Specific Variables
 
