@@ -20,13 +20,13 @@ var host = Host.CreateDefaultBuilder()
   .ConfigureServices((hostContext, services) =>
   {
     // gets the db connection info so we can inject it into the Sql service
-    var dbUsername = Environment.GetEnvironmentVariable("db_username") ?? string.Empty;
-    var dbPassword = Environment.GetEnvironmentVariable("db_password") ?? string.Empty;
-    var baseConnection = hostContext.Configuration.GetConnectionString("DefaultConnection") ?? string.Empty;
+    var dbUsername = Environment.GetEnvironmentVariable("DB_USERNAME") ?? string.Empty;
+    var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD") ?? string.Empty;
+    var dbConnection = Environment.GetEnvironmentVariable("DB_CONNECTION") ?? string.Empty;
 
     services.AddSingleton<DbSettings>(new DbSettings
     {
-      BaseConnection = baseConnection,
+      BaseConnection = dbConnection,
       Username = dbUsername.Replace("\"", "\"\""),
       Password = dbPassword.Replace("\"", "\"\"")
     });
@@ -55,6 +55,8 @@ try
   // attempt to run the job, retrying if it fails up to the max retries
   while (!isSuccess && attempts < jobSettings.Retries)
   {
+    Logger.Log($"Attempt {attempts + 1} of {jobSettings.Retries}");
+
     try
     {
       await runner.Run(jobSettings.ResourceUrl, jobSettings.DownloadedName);
