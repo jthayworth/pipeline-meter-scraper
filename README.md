@@ -11,7 +11,7 @@ The following setup is required to run this program locally:
 
 ## Job Settings
 
-Each job requires the following environment variables to be set.
+Each job requires the following environment variables to be set. These variables would either go in a `yaml` file if you are running this in a docker container for a cronjob or a `.env` file for running locally.
 
 #### Generic Variables
 
